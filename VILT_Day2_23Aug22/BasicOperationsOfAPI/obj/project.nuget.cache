@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0QGCw/101VzOz0nxs+R68wkczuey+IWReJUInLeihKnGmYHnpwlZhudbnC82hbTC5axHui2O+mrXrsvO0SF6tw==",
+  "dgSpecHash": "OjETVyOlExZ1lM1iqvwDbSbZGWn5XIk8hWmTYRqG8t8hwTdxzHGKdvFXveXrSy3H9nf9JbIDltjZc548dATXzA==",
   "success": true,
-  "projectFilePath": "D:\\Cogdotnet1690\\VILT_Day2_23Aug22\\BasicOperationsOfAPI\\BasicOperationsOfAPI.csproj",
+  "projectFilePath": "D:\\Cogdotnet1690\\Git\\VILTSessions\\VILT_Day2_23Aug22\\BasicOperationsOfAPI\\BasicOperationsOfAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cogdotnet1690\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\cogdotnet1690\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

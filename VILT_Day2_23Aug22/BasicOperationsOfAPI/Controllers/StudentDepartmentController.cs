@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BasicOperationsOfAPI.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace BasicOperationsOfAPI.Controllers
 {
@@ -9,15 +11,27 @@ namespace BasicOperationsOfAPI.Controllers
     {
         public static List<Student> stud = new List<Student>();
         public static List<Department> dept = new List<Department>();
+        public static List<StudentDepartmentViewModel> studList = new List<StudentDepartmentViewModel>();
 
-
+        [Produces("application/xml")]//Content type
         [HttpGet]
         [Route("StudentsList")]
-        public IEnumerable<Student> GetStudent()
+        public IEnumerable<StudentDepartmentViewModel> GetStudent()
         {
-            return stud;
+            foreach(var s in stud)
+            {
+                var dname = dept.Find(d => d.DepartmentId == s.StudentDepartmentId).DepartmentName;
+                studList.Add(new StudentDepartmentViewModel
+                {
+                    StudentId=s.StudentId,
+                    StudentName=s.StudentName,
+                    DepartmentName=dname
+                });
+            }
+            return studList;
         }
 
+        [Produces("application/xml")]
         [HttpGet]
         [Route("DepartmentList")]
         public IEnumerable<Department> GetDepartment()
@@ -74,7 +88,6 @@ namespace BasicOperationsOfAPI.Controllers
             }
             catch (Exception e)
             {
-                //return BadRequest("Can't able to add Student");
                 throw e;
             }
         }
@@ -107,10 +120,81 @@ namespace BasicOperationsOfAPI.Controllers
             }
             catch (Exception e)
             {
-                //return BadRequest("Can't able to update Department");
                 throw e;
             }
         }
 
+        [HttpPut]
+        [Route("UpdateStudent")]
+        public IActionResult UpdateStudent(int id,string name,int deptId)
+        {
+            var student = stud.Find(s => s.StudentId == id);
+            var isExists = stud.Contains(student);
+
+            if (!isExists)
+            {
+                if (student == null)
+                    return BadRequest("Student having id " + id + " not found");
+            }
+
+            try
+            {
+                student.StudentName = name;
+                student.StudentDepartmentId= deptId;
+                return Ok("Updated student successfully");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        [HttpDelete]
+        [Route("DeleteStudent")]
+        public IActionResult DeleteStudent(int id)
+        {
+            var student = stud.Find(s => s.StudentId == id);
+            var isExists = stud.Contains(student);
+
+            if (!isExists)
+            {
+                if (student == null)
+                    return BadRequest("Student having id " + id + " not found");
+            }
+
+            try
+            {
+                stud.Remove(student);
+                return Ok("Deleted student successfully");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        [HttpDelete]
+        [Route("DeleteDepartment")]
+        public IActionResult DeleteDepartment(int id)
+        {
+            var department = dept.Find(d => d.DepartmentId == id);
+            var isExists = dept.Contains(department);
+
+            if (!isExists)
+            {
+                if (department == null)
+                    return BadRequest("Department having id " + id + " not found");
+            }
+
+            try
+            {
+                dept.Remove(department);
+                return Ok("Deleted department successfully");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
