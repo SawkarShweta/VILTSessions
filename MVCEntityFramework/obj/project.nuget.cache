@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x/NENbFai5YzsR9ILnI9/4E7olrj8C84pZcY5HQ9WRcJ/5Fl5xjq8L4vMNYIi1n3k1St5BJ/oFQjAGWdeCsQmA==",
+  "dgSpecHash": "znXjvGzkA+bk2AdzkBWrhoFffvlvuukmVh97BjYET1RkJ3PCLrDfaEDrI4BUtNz6laeIHs0HM4BqAfPhrYj8UQ==",
   "success": true,
-  "projectFilePath": "D:\\Cogdotnet1690\\VILT_Day2_23Aug22\\MVCEntityFramework\\MVCEntityFramework.csproj",
+  "projectFilePath": "D:\\Cogdotnet1690\\Git\\VILTSessions\\MVCEntityFramework\\MVCEntityFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cogdotnet1690\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cogdotnet1690\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,0 +1,67 @@
+{
+  "Routes": [
+    {
+      //https://localhost:7047/WeatherForecast
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7047"
+        }
+      ],
+      "UpstreamPathTemplate": "/weather/weatherForecast",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      //https://localhost:7259/Student
+      "DownstreamPathTemplate": "/Student",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7259"
+        }
+      ],
+      "UpstreamPathTemplate": "/student/StudentList",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      //https://localhost:7259/Employee
+      "DownstreamPathTemplate": "/Employee",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7167"
+        }
+      ],
+      "UpstreamPathTemplate": "/employee/EmployeeList",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      //https://localhost:7237/Department
+      "DownstreamPathTemplate": "/Department",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7237"
+        }
+      ],
+      "UpstreamPathTemplate": "/department/DepartmentList",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7233"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cY2tf/uPHCVf8M8BMuDGaYWKCe0lIV8BqKImWDBSEO8=",
+  "Source": "WebAPISecondUserService",
+  "BasePath": "_content/WebAPISecondUserService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEntityFramework", "MVCEntityFramework.csproj", "{2292259C-DD79-42FA-859D-456BE3201CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCEntityFramework", "MVCEntityFramework.csproj", "{2292259C-DD79-42FA-859D-456BE3201CC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIEntityFramework", "..\..\Git\VILTSessions\APIEntityFramework\APIEntityFramework.csproj", "{15DA4573-E1D1-48C7-A616-403FAFF632C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISDemo", "..\IISDemo\IISDemo.csproj", "{C93BD9AE-3A6C-42CB-B4F4-C4870456ED01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{15DA4573-E1D1-48C7-A616-403FAFF632C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DA4573-E1D1-48C7-A616-403FAFF632C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DA4573-E1D1-48C7-A616-403FAFF632C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C93BD9AE-3A6C-42CB-B4F4-C4870456ED01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C93BD9AE-3A6C-42CB-B4F4-C4870456ED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C93BD9AE-3A6C-42CB-B4F4-C4870456ED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C93BD9AE-3A6C-42CB-B4F4-C4870456ED01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

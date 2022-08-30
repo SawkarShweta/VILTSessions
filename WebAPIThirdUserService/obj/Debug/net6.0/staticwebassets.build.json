@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DdmDzEkhLhvBOFQcSndHelUY3EE9vOHQJNMLRPJrI/g=",
+  "Source": "WebAPIThirdUserService",
+  "BasePath": "_content/WebAPIThirdUserService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

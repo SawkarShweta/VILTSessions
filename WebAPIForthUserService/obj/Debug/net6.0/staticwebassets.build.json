@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Xfbtq8zIAyjBtbOgaFb87B4UzpoZU69pBhCXX6C1gGU=",
+  "Source": "WebAPIForthUserService",
+  "BasePath": "_content/WebAPIForthUserService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

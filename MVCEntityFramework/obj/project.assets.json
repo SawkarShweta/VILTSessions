@@ -9885,11 +9885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cogdotnet1690\\VILT_Day2_23Aug22\\MVCEntityFramework\\MVCEntityFramework.csproj",
+      "projectUniqueName": "D:\\Cogdotnet1690\\Git\\VILTSessions\\MVCEntityFramework\\MVCEntityFramework.csproj",
       "projectName": "MVCEntityFramework",
-      "projectPath": "D:\\Cogdotnet1690\\VILT_Day2_23Aug22\\MVCEntityFramework\\MVCEntityFramework.csproj",
+      "projectPath": "D:\\Cogdotnet1690\\Git\\VILTSessions\\MVCEntityFramework\\MVCEntityFramework.csproj",
       "packagesPath": "C:\\Users\\cogdotnet1690\\.nuget\\packages\\",
-      "outputPath": "D:\\Cogdotnet1690\\VILT_Day2_23Aug22\\MVCEntityFramework\\obj\\",
+      "outputPath": "D:\\Cogdotnet1690\\Git\\VILTSessions\\MVCEntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
