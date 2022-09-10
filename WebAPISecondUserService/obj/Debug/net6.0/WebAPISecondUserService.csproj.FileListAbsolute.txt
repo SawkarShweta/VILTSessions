@@ -25,3 +25,13 @@ D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\obj\Debug\net6.0\refin
 D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\obj\Debug\net6.0\WebAPISecondUserService.pdb
 D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\obj\Debug\net6.0\WebAPISecondUserService.genruntimeconfig.cache
 D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\obj\Debug\net6.0\ref\WebAPISecondUserService.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPISecondUserService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

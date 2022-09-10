@@ -25,3 +25,6 @@ D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\obj\Debug\net6.0\refint
 D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\obj\Debug\net6.0\WebAPIForthUserService.pdb
 D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\obj\Debug\net6.0\WebAPIForthUserService.genruntimeconfig.cache
 D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\obj\Debug\net6.0\ref\WebAPIForthUserService.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\Cogdotnet1690\Git\VILTSessions\WebAPIForthUserService\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

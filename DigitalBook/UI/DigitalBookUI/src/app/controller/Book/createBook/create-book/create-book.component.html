@@ -1,0 +1,61 @@
+<div class="container">
+    <h2> Create Book</h2>
+    <div class="cards-container"> 
+      <div class="cards-form">
+          <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="">Title</label>
+                <input type="text" name="title" [(ngModel)]="book.bookName">
+            </div>
+            <div class="form-group">
+                <label for="">Category</label>
+                <select id="idCategory" name="role" class="form-control validate" [(ngModel)]="book.categoryId">
+                    <option *ngFor="let category of categories" [value]="category.categoryId">
+                      {{category.categoryName}}
+                    </option>
+                  </select>
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="number" name="price" [(ngModel)]="book.price">
+            </div>
+            <div class="form-group">
+                <label for="">Publisher</label>
+                <input type="text" name="publisher" [(ngModel)]="book.publisher">
+            </div>
+            <div class="form-group">
+                <label for="">Content</label>
+                <input type="text" name="content" [(ngModel)]="book.content">
+            </div>
+            <div class="form-group">
+                <button>Save</button>
+              </div>
+          </form>
+      </div>
+      <div class="cards-grid">
+        <div class="card-row">
+            <div class="card-row-details" *ngIf="books.length>0; else BookNotFound">
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Book Name</th>
+                        <th>Price</th>
+                         <th>Author Name</th>
+                         <th>Publisher</th>
+                    </thead>
+                    <tbody *ngFor="let book of books">
+                        <tr>
+                            <td>{{ book.bookName }}</td>
+                            <td>{{ book.price }}</td>
+                            <td>{{ book.user?.userName }}</td>
+                            <td>{{ book.publisher }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ng-template #BookNotFound>
+                <h3>book not found</h3>
+            </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>

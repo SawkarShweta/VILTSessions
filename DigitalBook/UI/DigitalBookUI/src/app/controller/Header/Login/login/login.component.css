@@ -1,0 +1,18 @@
+.modalHeader{
+    background-color:#28a745 ;
+    color: white;
+}
+
+i{
+    color: #28a745;
+}
+
+.modal-dialog,
+.modal-content {
+    height: 89%;
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+}

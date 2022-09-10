@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPISecondUserService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
+
     public class StudentController : ControllerBase
     {
         private static readonly string[] Names = new[]
