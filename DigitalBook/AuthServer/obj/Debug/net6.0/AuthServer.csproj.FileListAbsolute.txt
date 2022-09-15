@@ -1,9 +1,3 @@
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.csproj.AssemblyReference.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.GeneratedMSBuildEditorConfig.editorconfig
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.AssemblyInfoInputs.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.AssemblyInfo.cs
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.csproj.CoreCompileInputs.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.MvcApplicationPartsAssemblyInfo.cache
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\UserService.deps.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\UserService.runtimeconfig.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\UserService.exe
@@ -258,7 +252,13 @@ D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\runtim
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\UserService.dll
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\bin\Debug\net6.0\UserService.pdb
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.csproj.AssemblyReference.cache
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.AssemblyInfoInputs.cache
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.AssemblyInfo.cs
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.csproj.CoreCompileInputs.cache
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.MvcApplicationPartsAssemblyInfo.cs
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\AuthServer.MvcApplicationPartsAssemblyInfo.cache
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\staticwebassets.build.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\staticwebassets.development.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\AuthServer\obj\Debug\net6.0\scopedcss\bundle\AuthServer.styles.css

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
 import {Book} from 'src/app/models/book';
 import {User} from 'src/app/models/user';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-create-book',
@@ -11,7 +12,7 @@ import {User} from 'src/app/models/user';
 export class CreateBookComponent implements OnInit {
   msg: string='';
 
-  constructor(private booksService : BooksService) { }
+  constructor(private booksService : BooksService,private headerService:HeaderService) { }
   user:User=JSON.parse(localStorage.getItem('User') || '{}');
 
   books:Book[] = [];
@@ -29,24 +30,40 @@ export class CreateBookComponent implements OnInit {
     createdby:0,
     modifiedDate:new Date(),
     modifiedby:0,
-    user:undefined
+    user:null
   }
 
-  categories: any=this.getAllCategories();
+  LoggedUserId:number|0=0;
 
+  categories: any=this.getAllCategories();
   ngOnInit(): void {
     //this.getAllCategories();
+    this.headerService.CheckUserLoggedInOrNot();
+    this.GetUserID();
+    this.getAllBooksById();
+  }
+
+  GetUserID(){
+    let values = JSON.parse(localStorage.getItem("User") || '');
+    this.LoggedUserId = values.userId;
   }
 
   getAllCategories() {
     this.booksService.getAllCategories()
     .subscribe(
-      response => { this.categories = response}
+      response => { this.categories = response;}
     );
   }
 
   getAllBooks() {
     this.booksService.getAllBooks()
+    .subscribe(
+      response => { this.books = response}
+    );
+  }
+
+    getAllBooksById() {
+    this.booksService.getAllBooksById(this.LoggedUserId)
     .subscribe(
       response => { this.books = response}
     );
@@ -62,7 +79,7 @@ export class CreateBookComponent implements OnInit {
               this.msg="Book Saved Successfully";
               alert(this.msg);
             }
-            this.getAllBooks();
+            this.getAllBooksById();
             this.book = {
               bookId:0,
               categoryId :0,
@@ -87,4 +104,10 @@ export class CreateBookComponent implements OnInit {
      }
   }
 
+  blockBook(book:Book,btn:any){
+    this.booksService.blockUnblockBook(book.bookId)
+    .subscribe(
+      response => { btn.value=response.active==true?"Block":"Unblock";}
+    );
+  }
 }

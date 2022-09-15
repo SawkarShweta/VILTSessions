@@ -14,5 +14,5 @@ export interface Book {
     createdby:number;
     modifiedDate:Date;
     modifiedby:number;
-    user?:User;
+    user:User|null;
 }

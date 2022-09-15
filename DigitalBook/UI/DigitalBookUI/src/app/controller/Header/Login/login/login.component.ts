@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { throwError } from 'rxjs';
 import { User } from 'src/app/models/user';
+import { HeaderService } from 'src/app/services/header.service';
 import { UsersService } from 'src/app/services/users.services';
+import { HeaderComponent } from '../../header/header.component';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +13,7 @@ import { UsersService } from 'src/app/services/users.services';
 })
 export class LoginComponent implements OnInit {
   displayStyle = "block";
+  loginfailed=false;
   users: User[] = [];
   user: User = {
     userId: 0,
@@ -25,12 +29,11 @@ export class LoginComponent implements OnInit {
  token:string='';
  isAuthenticated:boolean=false;
 
-  constructor(private router:Router,private usersService:UsersService) { }
-
-  ngOnInit(): void {
-    this.openPopup();
+  constructor(private router:Router,private usersService:UsersService,private headerService:HeaderService) { }
+  ngOnInit(){
+    this.loginfailed=false;
   }
-  
+
   openPopup() {
     this.displayStyle = "block";
   }
@@ -50,12 +53,27 @@ export class LoginComponent implements OnInit {
               response => { 
                 this.user = response;
                 localStorage.setItem("User",JSON.stringify(this.user));
-                alert("Welcome "+this.user.firstName +" "+this.user.lastName);
+                  let headerComponentObj = new HeaderComponent(this.router,this.headerService);
+                  headerComponentObj.ngOnInit();
+
+                  // this.nameEmitter.emit(true);  
+                  if(this.user.roleId == 1) //This is Author
+                  {
+                    this.router.navigateByUrl('/createBook').then(()=>{window.location.reload()});
+                    //this.router.navigateByUrl('/createBook');
+                  }
+                  else{ 
+                      // This is Reader
+                      this.router.navigateByUrl('/reader').then(()=>{window.location.reload()});
+                      //this.router.navigateByUrl('/reader');
+                  }
               }
             )
           }
           else
             localStorage.removeItem("Token");
+            //alert("Incorrect UserName or Password");
+            this.loginfailed=true;
         }
       );
   }

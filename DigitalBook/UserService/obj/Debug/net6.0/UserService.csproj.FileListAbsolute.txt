@@ -1,10 +1,3 @@
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.csproj.AssemblyReference.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.GeneratedMSBuildEditorConfig.editorconfig
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.AssemblyInfoInputs.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.AssemblyInfo.cs
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.csproj.CoreCompileInputs.cache
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cs
-D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cache
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\appsettings.Development.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\appsettings.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\UserService.exe
@@ -251,6 +244,13 @@ D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\runti
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.csproj.AssemblyReference.cache
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.AssemblyInfoInputs.cache
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.AssemblyInfo.cs
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.csproj.CoreCompileInputs.cache
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cs
+D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\UserService.MvcApplicationPartsAssemblyInfo.cache
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\staticwebassets.build.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\staticwebassets.development.json
 D:\Cogdotnet1690\Git\VILTSessions\DigitalBook\UserService\obj\Debug\net6.0\scopedcss\bundle\UserService.styles.css

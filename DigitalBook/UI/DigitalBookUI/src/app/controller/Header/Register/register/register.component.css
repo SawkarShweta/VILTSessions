@@ -14,7 +14,7 @@ i{
 
 .modal-dialog,
 .modal-content {
-    height: 92%;
+    height: 90%;
 }
 
 .modal-body {
@@ -25,4 +25,8 @@ i{
 
 .modal-backdrop.in {
 	opacity: 0.9;
+}
+
+.tophight{
+    top: 40px;
 }

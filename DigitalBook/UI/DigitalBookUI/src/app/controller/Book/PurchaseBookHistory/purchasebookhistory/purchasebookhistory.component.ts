@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Book } from 'src/app/models/book';
+import { purchase } from 'src/app/models/purchase';
+import { User } from 'src/app/models/user';
+import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-purchasebookhistory',
@@ -6,10 +11,72 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./purchasebookhistory.component.css']
 })
 export class PurchasebookhistoryComponent implements OnInit {
+  display = "none";
 
-  constructor() { }
+  user:User={
+    userId:0,
+    userName:'',
+    firstName:'',
+    lastName:'',
+    emailId:'',
+    userPassword:'',
+    roleId:0,
+    active:true
+  }
+
+  bookHistoryList:purchase[] = [];
+  @Input() book : Book = {
+    bookId:0,
+    categoryId :0,
+    userId: 0,
+    bookName:'',
+    price:0,
+    publisher:'',
+    publishedDate:new Date(),
+    content:'',
+    active:true,
+    createdDate:new Date(),
+    createdby:0,
+    modifiedDate:new Date(),
+    modifiedby:0,
+    user:this.user,
+  }
+
+  objpurchase : purchase={
+    purchaseId: 0,
+    emailId : '',
+    bookId : 0,
+    purchaseDate:new Date,
+    paymentMode : '',
+    isRefund : false,
+    purchaseStatus:'Completed',
+    book:this.book
+  }
+
+  constructor(private services: HeaderService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  loadBookHistory(){
+    
+    this.services.GetBookHistory(this.objpurchase.emailId).subscribe(
+      response => {this.bookHistoryList = response;
+        console.log(this.bookHistoryList);
+        this.display = "block";
+      }
+    )
+  }
+
+  onSubmit(){
+    this.objpurchase.bookId = this.book.bookId;
+    this.objpurchase.book=null;
+    this.services.PurchaseBook(this.objpurchase).subscribe(
+      response => { alert("Book Purchased Successfully.");
+      this.loadBookHistory(); }
+    )
+  }
+  onFocusOutEvent(event: any){
+    this.loadBookHistory();
+  }
 }

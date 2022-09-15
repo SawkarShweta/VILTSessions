@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users.services';
 import { Router } from '@angular/router';
+import { catchError, map, of, Subscription } from 'rxjs';
+import { EMPTY_OBSERVER } from 'rxjs/internal/Subscriber';
 
 @Component({
   selector: 'app-register',
@@ -75,9 +77,6 @@ export class RegisterComponent implements OnInit {
             };
           }
         );
-     }
-     else {
-       //this.updateCard(this.card);
      }
   }
 

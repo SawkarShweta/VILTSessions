@@ -9,7 +9,7 @@ namespace UserService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   // [Authorize]
+    //[Authorize]
     public class UserMastersController : ControllerBase
     {
         private readonly DigitalBookContext _context;
@@ -21,6 +21,7 @@ namespace UserService.Controllers
 
         // GET: api/UserMasters
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<UserMaster>>> GetUserMasters()
         {
             if (_context.UserMasters == null)
@@ -38,6 +39,7 @@ namespace UserService.Controllers
 
         // GET: api/UserMasters/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<UserMaster>> GetUserMaster(int id)
         {
           if (_context.UserMasters == null)
@@ -116,7 +118,11 @@ namespace UserService.Controllers
             }
             try
             {
-                var countEmailId = _context.UserMasters.Where(x => x.EmailId == userMaster.EmailId).Count();
+                var isSameUserName= _context.UserMasters.Where(x => x.UserName == userMaster.UserName).Count();
+                if (isSameUserName > 0)
+                    return Problem("User Name already present");
+
+                var countEmailId = _context.UserMasters.Where(x => x.EmailId == userMaster.EmailId && x.RoleId == userMaster.RoleId).Count();
                 isValidEmail = countEmailId > 0 ? false : true;
 
                 if (isValidEmail)
@@ -140,6 +146,7 @@ namespace UserService.Controllers
 
         // DELETE: api/UserMasters/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteUserMaster(int id)
         {
             if (_context.UserMasters == null)

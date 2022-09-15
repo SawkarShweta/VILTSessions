@@ -20,7 +20,7 @@ h1{
 
 .cards-grid{
     width: 50%;
-    padding: 2em;
+    padding-left: 2em;
 }
 
 form .form-group{
@@ -67,4 +67,10 @@ form button{
     background-color: green;
     color: white;
     border: darkgreen;
+}
+
+.modalHeader{
+    background-color: #28a745;
+    color: white;
+    text-align: center;
 }

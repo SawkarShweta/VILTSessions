@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -44,6 +45,24 @@ namespace UserService.Controllers
               return NotFound();
           }
             var book = await _context.Books.FindAsync(id);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return book;
+        }
+
+        [HttpGet]
+        [Route("GetAllBooksByUserId")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetAllBooksByUserId(int id)
+        {
+            if (_context.Books == null)
+            {
+                return NotFound();
+            }
+            var book = await _context.Books.Where(x=>x.UserId==id).ToListAsync();
 
             if (book == null)
             {
@@ -148,6 +167,11 @@ namespace UserService.Controllers
                 {
                     if(b.User!=null)
                         b.User.Books = null;
+                    else
+                    {
+                        b.User = await _context.UserMasters.Where(x => x.UserId == b.UserId).SingleOrDefaultAsync();
+                        b.User.Books = null;
+                    }
                 }
             }
             return book;
@@ -164,6 +188,32 @@ namespace UserService.Controllers
             }
 
             return await _context.Categories.ToListAsync();
+        }
+
+        [HttpPut]
+        [Route("BlockUnblockBook")]
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<Book>>> BlockUnblockBook(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest();
+            }
+
+            if (!BookExists(id))
+            {
+                return NotFound();
+            }
+
+            Book b = await _context.Books.Where(x => x.BookId == id).SingleOrDefaultAsync();
+            if (b != null)
+            {
+                b.Active = !b.Active;
+               _context.Entry(b).State= EntityState.Modified;
+                await _context.SaveChangesAsync();
+            }
+
+            return CreatedAtAction("GetBook", new { id = b.BookId }, b);
         }
     }
 }
