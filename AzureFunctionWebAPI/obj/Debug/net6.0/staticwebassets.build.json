@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Zmo6mbBJgT08T4RxNfK4UsvwUfioqgQJqVp+XqKjhN4=",
+  "Source": "AzureFunctionWebAPI",
+  "BasePath": "_content/AzureFunctionWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
